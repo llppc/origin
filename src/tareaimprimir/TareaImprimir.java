@@ -5,6 +5,7 @@ public class TareaImprimir {
     
     /**
      * Este es el main de mi programa
+     * @author Nelson Carrillo
      */
     public static void main(String[] args) {
         
