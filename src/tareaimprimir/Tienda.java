@@ -20,10 +20,22 @@ public class Tienda {
     Eter e1 = new Eter();
     Elixir el1 = new Elixir();
     CarameloRaro cr1 = new CarameloRaro();
-
-
-    
+    ListaEnlazada inventario = new ListaEnlazada();
     Scanner myObje = new Scanner(System.in);
+    
+    /**
+     * Abastece el inventario al iniciar el programa con los regalos
+     * @version 17 enero 2024
+     * @param none 
+     * 
+     */
+    void fillInventario(){
+        (this.inventario).insertarlast(e1);
+        (this.inventario).insertarlast(b1);
+        (this.inventario).insertarlast(p1);
+        (this.inventario).insertarlast(el1);
+        (this.inventario).insertarlast(cr1); 
+    }
     
     /**
      Despliega menu de seleccion acorde a el regalo
@@ -32,15 +44,12 @@ public class Tienda {
      * @param Tamagotchi que vendria siendo el pikachu para modificar
      * su amistad con setter
      */
-    void menu(Usuario user,Tamagotchi t1){
+    void menu(Usuario user,Pikachu t1){
+        
         int transfer = 0;
         System.out.println("");
         System.out.println("Ingrese la cantidad de watts a pagar.");
-        System.out.println(b1.menuItem());
-        System.out.println(p1.menuItem());
-        System.out.println(e1.menuItem());
-        System.out.println(el1.menuItem());
-        System.out.println(cr1.menuItem());
+        inventario.recorrereimprimir();
         System.out.println("O INGRESE 4 PARA VOLVER");
         while(transfer != b1.costo() & transfer!=p1.costo() & transfer!=e1.costo() & transfer!=el1.costo() & transfer!=cr1.costo() & transfer!=4){
             System.out.println("Ingrese ->");
@@ -57,27 +66,32 @@ public class Tienda {
             if (transfer == b1.costo()) {
                 
                 user.setCash(cash-b1.costo());
-                t1.darAmistad(b1.amistad());  
+                t1.darAmistad(b1.amistad()); 
+                inventario.eliminarElemento(b1);
                 
             } else if (transfer == p1.costo()) {
                 
                 user.setCash(cash-p1.costo());
                 t1.darAmistad(p1.amistad());
+                inventario.eliminarElemento(p1);
                 
             }else if (transfer == e1.costo()) {
                 
                 user.setCash(cash-e1.costo());
-                t1.darAmistad(e1.amistad()); 
+                t1.darAmistad(e1.amistad());
+                inventario.eliminarElemento(e1);
                 
             }else if (transfer == el1.costo()) {
                 
                 user.setCash(cash-el1.costo());
-                t1.darAmistad(el1.amistad()); 
+                t1.darAmistad(el1.amistad());
+                inventario.eliminarElemento(el1);
                 
             }else if (transfer == cr1.costo()) {
                 
                 user.setCash(cash-cr1.costo());
                 t1.darAmistad(cr1.amistad()); 
+                inventario.eliminarElemento(cr1);
                 
             }
             

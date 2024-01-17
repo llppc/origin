@@ -11,7 +11,7 @@ public class TareaImprimir {
         
         Scanner scanner = new Scanner(System.in);
         Usuario user = new Usuario();
-        Tamagotchi t1= new Tamagotchi();
+        Pikachu t1= new Pikachu();
         Tienda s1 = new Tienda();
         
         /** LOS THREADS PARA PODER SUMAR EN SIMULTANEO EL CASH 
@@ -55,6 +55,7 @@ public class TareaImprimir {
         incrementoThread.start(); //Se inicia thread para sumar watts.
         
         long Inicial = System.currentTimeMillis();
+        s1.fillInventario();
         while (true) {
             /**
              Menu de seleccion
@@ -71,7 +72,7 @@ public class TareaImprimir {
             int opcion = scanner.nextInt();
 
             if (opcion == 1) {
-              
+                 
                 s1.menu(user, t1);
             } else if (opcion == 4) {
                 decrementoThread.interrupt(); //Se detienen los hilos.

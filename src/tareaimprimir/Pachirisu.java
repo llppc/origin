@@ -3,14 +3,16 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package tareaimprimir;
+
 import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Clase de tamagotchi lo que vendr&iacutea siendo pikachu
+ *
  * @author nelsoncarrillo
  */
-public class Tamagotchi {
+public class Pachirisu {
+    
     private long amistad=0;
     Scanner myObje = new Scanner(System.in);
     
@@ -128,12 +130,4 @@ public class Tamagotchi {
         }
         
     }
-    
-    
-    
-
-    }
-
-
-
-
+}
