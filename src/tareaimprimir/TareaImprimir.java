@@ -1,6 +1,6 @@
 package tareaimprimir;
 import java.util.Scanner;
-
+//fpush
 public class TareaImprimir {
     
     /**
