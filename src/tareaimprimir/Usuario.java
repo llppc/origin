@@ -1,6 +1,6 @@
 package tareaimprimir;
 /**
- Clase usuario, es como el cartera visto en clase
+ lase usuario, es como el cartera visto en clase
  * solo que adptado ya que lo veo m&aacutes como las acciones del usuario
  */
 public class Usuario {

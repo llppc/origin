@@ -1,6 +1,6 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * ck nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ *ck nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package tareaimprimir;
 
@@ -9,7 +9,7 @@ package tareaimprimir;
  * @author nelsoncarrillo
  */
 public class Pokebola extends Regalo{
-    public Pokebola(){
+    public Pokebola (){
         super.amistad = 300;
         super.costo = 200;
     }
