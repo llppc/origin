@@ -26,9 +26,11 @@ public class Usuario {
      Se le agrega saldo en una unidad
      * Hecho especialmente para el sumar un watt por segundo
      */
-    public void sumarCash() {
-        this.cash+=1;
+    public void sumarCash(int n) {
+        this.cash+=n;
     }
+    
+    
     
     /**
      Permite apostar al usuario dependiendo de su cash, si dispone

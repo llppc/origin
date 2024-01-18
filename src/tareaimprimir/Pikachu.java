@@ -10,7 +10,7 @@ import java.util.Scanner;
  * Clase de tamagotchi lo que vendr&iacutea siendo pikachu
  * @author nelsoncarrillo
  */
-public class Pikachu {
+public class Pikachu extends Pokemon{
     private long amistad=0;
     Scanner myObje = new Scanner(System.in);
     
@@ -44,7 +44,7 @@ public class Pikachu {
      */
     public void verAmistad(){
         System.out.println("");
-        System.out.println("NIVEL DE AMISTAD:    "+this.amistad+" BAYAS.");
+        System.out.println("NIVEL DE AMISTAD:    "+this.amistad);
         if(10000>= this.amistad & this.amistad >=7500){
             System.out.println("");
             System.out.println(" |\\---/|");
@@ -75,7 +75,7 @@ public class Pikachu {
      * del tamagotchi ya que este genera una carta del mazo y por
      * @param Usuario se le modifica los watts con su m&eacutetodo de apostar
      */
-    public void jugar(Usuario user){
+    void jugar(Usuario user){
         int opt=0;
         int apt=0;
         Random r = new Random();
@@ -128,6 +128,8 @@ public class Pikachu {
         }
         
     }
+
+    
     
     
     

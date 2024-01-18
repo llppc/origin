@@ -11,61 +11,40 @@ import java.util.Scanner;
  *
  * @author nelsoncarrillo
  */
-public class Pachirisu {
+public class Pachirisu extends Pokemon{
     
-    private long amistad=0;
+    int bayas=0;
     Scanner myObje = new Scanner(System.in);
     
-    /**
-     Se le resta el nivel de amistad al tamagotchi
-     * Hecho especialmente para disminuir el nivel cada segundo
-     */
-    public void restaram(){
-        this.amistad-=1;
-    }
     
     /**
-     Se le suma una cantidad n de amistad a la que ya acumulaba 
-     * @param Amistad que proviene de regalos
-     */
-    public void darAmistad(int n){
-        this.amistad+=n;
-    }
-    
-    /**
-     Hecha para obtener el nivel al momento de llamar la funci&oacuten
-     * de amistad del tamagotchi
-     */
-    public long getAmistad(){
-        return this.amistad;
-    }
-    
-    /**
-     * Imprime numero de amistad y dependiendo de este ya que el maximo es 
+     * Imprime numero de bayas ya que este no acepta amistad
+     * sino que se guarda las bayas
+     * y dependiendo de este ya que el maximo es 
      * 10000 pues el &aacutenimo del tamagotchi
      */
     public void verAmistad(){
         System.out.println("");
-        System.out.println("NIVEL DE AMISTAD:    "+this.amistad+" BAYAS.");
-        if(10000>= this.amistad & this.amistad >=7500){
+        System.out.println("BAYAS RECOLECTADAS:    "+this.bayas);
+        if(10>= this.bayas & this.bayas >=7){
             System.out.println("");
-            System.out.println(" |\\---/|");
+            System.out.println(" ________");
             System.out.println(" | ^_^ |");
             System.out.println("  \\_^_/");
-        } else if(7500> this.amistad & this.amistad >=5000){
+        } else if(7> this.bayas & this.bayas >=5){
                         System.out.println("");
-            System.out.println(" |\\---/|");
+            System.out.println(" ________");
             System.out.println(" | O_O |");
             System.out.println("  \\_^_/");
-        }else if(5000> this.amistad & this.amistad >=2500){
+        }else if(5> this.bayas & this.bayas >=2){
                         System.out.println("");
 
-            System.out.println(" |\\---/|");
+            System.out.println(" ________");
             System.out.println(" | >_< |");
             System.out.println("  \\_^_/");
-        }else if(2500> this.amistad & this.amistad >=0){
+        }else if(2> this.bayas & this.bayas >=0){
                         System.out.println("");
-            System.out.println(" |\\---/|");
+            System.out.println(" ________");
             System.out.println(" | T_T |");
             System.out.println("  \\_^_/");
         }
@@ -84,7 +63,7 @@ public class Pachirisu {
         int cartaActual = r.nextInt(10) + 1;
         while(opt==0){
             System.out.println("");
-            System.out.println("LA CARTA ACTUAL DE PIKACHU: " +cartaActual);
+            System.out.println("LA CARTA ACTUAL DE PACHIRISU: " +cartaActual);
             System.out.println("Ingrese 1 para ingresar apuesta a que sera mayor.");
             System.out.println("Ingrese 2 para ingresar apuesta a que sera menor.");
             System.out.println("Ingrese 3 para regresar.");
@@ -129,5 +108,11 @@ public class Pachirisu {
             }
         }
         
+    }
+     /**
+     * En vez de dar amistad se le da bayas con este m&eacutetodo
+     */
+    void darAmistad(int baya){
+        this.bayas+=baya;
     }
 }

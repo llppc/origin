@@ -21,7 +21,9 @@ public class Tienda {
     Elixir el1 = new Elixir();
     CarameloRaro cr1 = new CarameloRaro();
     ListaEnlazada inventario = new ListaEnlazada();
+    ListaDoble inventariobayas = new ListaDoble();
     Scanner myObje = new Scanner(System.in);
+    
     
     /**
      * Abastece el inventario al iniciar el programa con los regalos
@@ -34,7 +36,11 @@ public class Tienda {
         (this.inventario).insertarlast(b1);
         (this.inventario).insertarlast(p1);
         (this.inventario).insertarlast(el1);
-        (this.inventario).insertarlast(cr1); 
+        (this.inventario).insertarlast(cr1);
+        (this.inventariobayas).insertarprimero(b1);
+        (this.inventariobayas).insertarprimero(b1);
+        (this.inventariobayas).insertarprimero(b1);
+        (this.inventariobayas).insertarprimero(b1);
     }
     
     /**
@@ -44,65 +50,101 @@ public class Tienda {
      * @param Tamagotchi que vendria siendo el pikachu para modificar
      * su amistad con setter
      */
-    void menu(Usuario user,Pikachu t1){
+    void menu(Usuario user,Pokemon t1){
         
-        int transfer = 0;
-        System.out.println("");
-        System.out.println("Ingrese la cantidad de watts a pagar.");
-        inventario.recorrereimprimir();
-        System.out.println("O INGRESE 4 PARA VOLVER");
-        while(transfer != b1.costo() & transfer!=p1.costo() & transfer!=e1.costo() & transfer!=el1.costo() & transfer!=cr1.costo() & transfer!=4){
-            System.out.println("Ingrese ->");
-            transfer= myObje.nextInt();
+        if(t1 instanceof Pikachu){
             
-        int cash =  user.getCash();
-        
-        /**
-         Se verifica que disponga del saldo
-         * para luego modificar acorde al regalo que compr&oacute
-         * la amistad del tamagotchi y los watts de saldo del user
-         */
-        if(cash >= transfer || transfer==4){
-            if (transfer == b1.costo()) {
-                
-                user.setCash(cash-b1.costo());
-                t1.darAmistad(b1.amistad()); 
-                inventario.eliminarElemento(b1);
-                
-            } else if (transfer == p1.costo()) {
-                
-                user.setCash(cash-p1.costo());
-                t1.darAmistad(p1.amistad());
-                inventario.eliminarElemento(p1);
-                
-            }else if (transfer == e1.costo()) {
-                
-                user.setCash(cash-e1.costo());
-                t1.darAmistad(e1.amistad());
-                inventario.eliminarElemento(e1);
-                
-            }else if (transfer == el1.costo()) {
-                
-                user.setCash(cash-el1.costo());
-                t1.darAmistad(el1.amistad());
-                inventario.eliminarElemento(el1);
-                
-            }else if (transfer == cr1.costo()) {
-                
-                user.setCash(cash-cr1.costo());
-                t1.darAmistad(cr1.amistad()); 
-                inventario.eliminarElemento(cr1);
-                
-            }
+            if(inventario.size==0){
+                System.out.println(" Inventario Vacío.");
+            }else{
             
-        }else{
-            /**En caso de que no disponga de los watts necesarios
-             */
-            throw new IllegalStateException("Saldo Insuficiente");
-            
+                int transfer = 0;
+                System.out.println("");
+                System.out.println("Ingrese la cantidad de watts a pagar.");
+                inventario.recorrereimprimir();
+                System.out.println("O INGRESE 4 PARA VOLVER");
+                while(transfer != b1.costo() & transfer!=p1.costo() & transfer!=e1.costo() & transfer!=el1.costo() & transfer!=cr1.costo() & transfer!=4){
+                    System.out.println("Ingrese ->");
+                    transfer= myObje.nextInt();
+
+                int cash =  user.getCash();
+
+                /**
+                 Se verifica que disponga del saldo
+                 * para luego modificar acorde al regalo que compr&oacute
+                 * la amistad del tamagotchi y los watts de saldo del user
+                 */
+                if(cash >= transfer || transfer==4){
+                    if (transfer == b1.costo()) {
+
+                        user.setCash(cash-b1.costo());
+                        t1.darAmistad(b1.amistad()); 
+                        inventario.eliminarElemento(b1);
+
+                    } else if (transfer == p1.costo()) {
+
+                        user.setCash(cash-p1.costo());
+                        t1.darAmistad(p1.amistad());
+                        inventario.eliminarElemento(p1);
+
+                    }else if (transfer == e1.costo()) {
+
+                        user.setCash(cash-e1.costo());
+                        t1.darAmistad(e1.amistad());
+                        inventario.eliminarElemento(e1);
+
+                    }else if (transfer == el1.costo()) {
+
+                        user.setCash(cash-el1.costo());
+                        t1.darAmistad(el1.amistad());
+                        inventario.eliminarElemento(el1);
+
+                    }else if (transfer == cr1.costo()) {
+
+                        user.setCash(cash-cr1.costo());
+                        t1.darAmistad(cr1.amistad()); 
+                        inventario.eliminarElemento(cr1);
+
+                    }
+
+                }else{
+                    /**En caso de que no disponga de los watts necesarios
+                     */
+                    throw new IllegalStateException("Saldo Insuficiente");
+
+                }
+            }    
         }
-        
-      }
+            
+      }else{ //si es instance de pachirisu que s&oacutelo recibe bayas
+            
+            int transfer = 0;
+            System.out.println("");
+            System.out.println("Ingrese el numero de la baya.");
+            inventariobayas.recorrereimprimir();
+            System.out.println("O INGRESE "+(inventariobayas.size+1) + " PARA VOLVER");
+            while(transfer>(inventariobayas.size+1) || 0>=transfer){
+                System.out.println("Ingrese ->");
+                transfer= myObje.nextInt();
+
+            int cash =  user.getCash();
+
+            /**
+             Se verifica que disponga del saldo
+             * para luego modificar acorde al regalo que compr&oacute
+             * la amistad del tamagotchi y los watts de saldo del user
+             */
+            if(cash >= 100 && transfer!=(inventariobayas.size+1)){
+                    user.setCash(cash-b1.costo());
+                    inventariobayas.eliminar(b1);
+            }else if(transfer!=(inventariobayas.size+1)){
+                /**En caso de que no disponga de los watts necesarios
+                 */
+                throw new IllegalStateException("Saldo Insuficiente");
+
+            }
+        }
+        }
     
     }
 }
