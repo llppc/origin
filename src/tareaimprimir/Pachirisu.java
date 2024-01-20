@@ -1,27 +1,30 @@
-/*fpush
- * C nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tareaimprimir;
 
 import java.util.Random;
 import java.util.Scanner;
 
 /**
- *
+ * Subclase de pokemon.
+ * Pues pachirisu es un tipo de pokemon, y al modificar la opci&oacuten de 
+ * elegir si usar a pachirisu o pikachu se cre&oacute esta herencia.
+ * 
  * @author nelsoncarrillo
+ * @version 1.0 17 enero 2024
  */
 public class Pachirisu extends Pokemon{
     
-    int bayas=0;
-    Scanner myObje = new Scanner(System.in);
+    int bayas=0; //este agrega atributo de bayas, no usa amistad
+    Scanner myObje = new Scanner(System.in);//para los inputs por consola.
     
     
     /**
-     * Imprime numero de bayas ya que este no acepta amistad
-     * sino que se guarda las bayas
-     * y dependiendo de este ya que el maximo es 
-     * 10000 pues el &aacutenimo del tamagotchi
-     */
+    * Imprime por pantalla el ascii art del pachirisu acorde a sus bayas.
+    * Tipo de polimorfismo para el m&eacutetodo de la superclase pokemon, este
+    * depende pues del nivel de bayas mientras que el de piakchu de la amistad.
+    * 
+    * @author nelsoncarrillo
+    * @version 1.0 17 enero 2024   
+    */
     public void verAmistad(){
         System.out.println("");
         System.out.println("BAYAS RECOLECTADAS:    "+this.bayas);
@@ -51,10 +54,14 @@ public class Pachirisu extends Pokemon{
     }
     
     /**
-     En vez de crear una clase juego, lo vi como un atributo propio 
-     * del tamagotchi ya que este genera una carta del mazo y por
-     * @param Usuario se le modifica los watts con su m&eacutetodo de apostar
-     */
+    * Permite abrir el juego de las apuestas.
+    * M&eacutetodo propuesto a polimorfismo tanto para pikachu como 
+    * pachirisu, aunque para esta version ambos tienen lo mismo.
+    * 
+    * @author nelsoncarrillo
+    * @version 1.0 17 enero 2024
+    * @param user instancia del usuario que apostar&aacute y gana o pierde watts.
+    */
     public void jugar(Usuario user){
         int opt=0;
         int apt=0;
@@ -108,9 +115,17 @@ public class Pachirisu extends Pokemon{
         }
         
     }
-     /**
-     * En vez de dar amistad se le da bayas con este m&eacutetodo
-     */
+    
+    /**
+    * Se le da la amistad proveniente de un regalo.
+    * La unica manera de obtener amistad es mediante un regalo, pero al ser pachirisu
+    * solo acepta bayas y en vez de tratarse de amistad es en bayas. Pues 
+    * surge el polimorfismo con respecto a la otra subclase de pokemon, el pikachu.
+    * 
+    * @author nelsoncarrillo
+    * @version 1.0 17 enero 2024.
+    * @param n integer de la cantidad de bayas.
+    */
     void darAmistad(int baya){
         this.bayas+=baya;
     }

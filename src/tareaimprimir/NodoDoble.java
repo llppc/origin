@@ -1,10 +1,8 @@
-/*fpush
- * C nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tareaimprimir;
 
 /**
- *Clase de Nodo doble para las listas de tipo dobles
+ * Clase de Nodo doble para las listas de tipo dobles.
+ * 
  * @version 17 enero 2024
  * @author nelsoncarrillo
  */
@@ -15,9 +13,12 @@ public class NodoDoble {
     NodoDoble anterior;
     
     /**
-    *M&eacutetodo constructor
-    * permite instanciar objetos de la clase NodoDoble
-    * @param Regalo que contendr&aacute el nodo
+    * M&eacutetodo constructor.
+    * Permite instanciar objetos de la clase NodoDoble.
+    * 
+    * @version 17 enero 2024
+    * @author nelsoncarrillo
+    * @param n regalo que contendr&aacute el nodo
     */
     public NodoDoble(Regalo n){
         this.elemento=n;
@@ -25,27 +26,62 @@ public class NodoDoble {
         this.anterior=null;
     }
     
-    //Setter del siguiente nodo
+    /**
+    * Establece el siguiente nodo.
+    * setter del nodo que le sigue.
+    * 
+    * @version 17 enero 2024
+    * @author nelsoncarrillo
+    * @param n nodo que le sigue
+    */
     void setSiguiente(NodoDoble n){
         this.siguiente=n;
     }
     
-    //Setter del anterior nodo
+    /**
+    * Establece el anterior nodo.
+    * setter del nodo que le antecede.
+    * 
+    * @version 17 enero 2024
+    * @author nelsoncarrillo
+    * @param n nodo que le antecede
+    */
     void setAnterior(NodoDoble n){
         this.anterior=n;
     }
     
-    //Getter del siguiente nodo en la lista doble
+    /**
+    * Devuelve el siguiente nodo.
+    * getter del nodo que le sigue.
+    * 
+    * @version 17 enero 2024
+    * @author nelsoncarrillo
+    * @return nodo que le sigue
+    */
     NodoDoble getSiguiente(){
         return this.siguiente;
     }
     
-    //Getter del anterior nodo en la lista doble
+    /**
+    * Devuelve el anterior nodo.
+    * getter del nodo que le antecede.
+    * 
+    * @version 17 enero 2024
+    * @author nelsoncarrillo
+    * @return nodo que le antecede
+    */
     NodoDoble getAnterior(){
         return this.anterior;
     }
     
-    //Getter del elemento contenido en el nodo doble 
+    /**
+    * Devuelve el elemento del nodo.
+    * getter del elemento propio del nodo.
+    * 
+    * @version 17 enero 2024
+    * @author nelsoncarrillo
+    * @return elemento del nodo.
+    */
     Regalo getElemento(){
         return this.elemento;
     }

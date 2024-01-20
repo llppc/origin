@@ -1,10 +1,8 @@
-/*
- * Clinbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tareaimprimir;
 
 /**
- *Clase de Nodo para las listas enlazadas
+ *Clase de Nodo para las listas enlazadas.
+ * 
  * @version 17 enero 2024
  * @author nelsoncarrillo
  */
@@ -13,30 +11,52 @@ public class NodoSimple {
     Regalo elemento;
     NodoSimple nxt;
     
-    //m&eacutetodo constructor
+    /**
+    * M&eacutetodo constructor.
+    * Permite instanciar objetos de la clase.
+    * 
+    * @version 17 enero 2024
+    * @author nelsoncarrillo
+    * @param n regalo que contendr&aacute el nodo
+    */
     public NodoSimple(Regalo n){
         this.elemento=n;
         this.nxt=null;
     }
     
-    //getter del nodo siguiente
+    /**
+    * Devuelve el siguiente nodo.
+    * getter del nodo que le sigue.
+    * 
+    * @version 17 enero 2024
+    * @author nelsoncarrillo
+    * @return nodo que le sigue
+    */
     NodoSimple getNxt(){
         return this.nxt;
     }
     
-    //setter del nodo siguiente
+    /**
+    * Establece el siguiente nodo.
+    * setter del nodo que le sigue.
+    * 
+    * @version 17 enero 2024
+    * @author nelsoncarrillo
+    * @param n nodo que le sigue
+    */
     void setNxt(NodoSimple n){
         this.nxt=n;
     }
     
-    //getter del elemento que es el regalo
+    /**
+    * Devuelve el elemento del nodo.
+    * getter del elemento propio del nodo.
+    * 
+    * @version 17 enero 2024
+    * @author nelsoncarrillo
+    * @return elemento del nodo.
+    */
     Regalo getElemento(){
         return this.elemento;
     }
-    
-    //setter del elemento regalo
-    void setElemento(Regalo n){
-        this.elemento=n;
-    }
-   
 }

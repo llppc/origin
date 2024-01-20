@@ -1,10 +1,8 @@
-/*
- * Ck nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tareaimprimir;
 
 /**
- *Clase de la lista simple enlazada
+ * Clase de la lista simple enlazada.
+ * 
  * @version 17 enero 2024
  * @author nelsoncarrillo
  */
@@ -15,12 +13,18 @@ public class ListaEnlazada {
     int size=0;
     
     /**
-     * M&eacutetodo constructor de la lista
+     * M&eacutetodo constructor de la lista.
+     * @version 17 enero 2024
+     * @author nelsoncarrillo
      */
     public ListaEnlazada(){
     }
     
     /**
+     * Devuelve el primer nodo de la lista.
+     * 
+     * @version 17 enero 2024
+     * @author nelsoncarrillo
      * @return primer elemento contenido en la lista
      */
     NodoSimple getpFirst() {
@@ -28,8 +32,12 @@ public class ListaEnlazada {
     }
     
     /**
-     * inserta a la &uacuteltima posici&oacuten digamos de la lista un elemento pasado como
-     * @param Regalo
+     * Inserta a la &uacuteltima posici&oacuten digamos de la lista.
+     * Inserta un elemento pasado como param.
+     * 
+     * @version 17 enero 2024
+     * @author nelsoncarrillo
+     * @param nuevo regalo a insertar.
      */
     void insertarlast(Regalo nuevo){
         NodoSimple nuev = new NodoSimple(nuevo);
@@ -47,8 +55,12 @@ public class ListaEnlazada {
     
     
     /**
-     * Devuelve true si encuentra en la lista el Elemento pasado como 
-     * @param Regalo
+     * Devuelve true si encuentra en la lista el Elemento.
+     * Este elemento es pasado como param.
+     * 
+     * @version 17 enero 2024
+     * @author nelsoncarrillo
+     * @param n regalo a buscar
      */
     boolean buscarelemento(Regalo n){
         for(NodoSimple indice = this.getpFirst(); indice != null ; indice = indice.getNxt() ){            
@@ -60,9 +72,11 @@ public class ListaEnlazada {
     }
     
     /**
-     * Recorre los regalos e imprime su m&eacutetodo polim&oacuterfico 
-     * @version 17 enerp 2024
-     * @param none
+     * Recorre los regalos e imprime su m&eacutetodo polim&oacuterfico.
+     * El polim&oacuterfico es pues propio de los pokemones, nos referimos a eso.
+     * 
+     * @version 17 enero 2024
+     * @author nelsoncarrillo
      */
     void recorrereimprimir(){   
         for(NodoSimple indice = this.getpFirst(); indice != null ; indice = indice.getNxt() ){
@@ -71,8 +85,12 @@ public class ListaEnlazada {
     }
     
     /**
-     * Elimina de la lista el elemento pasado por 
-     * @param Elemento
+     * Elimina de la lista el elemento pasado.
+     * Pasado pues como param
+     * 
+     * @version 17 enero 2024
+     * @author nelsoncarrillo
+     * @param n regalo a eliminar
      */
     void eliminarElemento(Regalo n){
         NodoSimple actual,anterior;//puedes inicializar dos del mismo tipo

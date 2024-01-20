@@ -6,13 +6,14 @@ package tareaimprimir;
 
 import java.util.Scanner;
 
-/** Clase tienda donde compra con watts los regalos
+/** Clase tienda donde compra con watts los regalos.
  * 
  * @author nelsoncarrillo
+ * @version 1.0 17 enero 2024
  */
 public class Tienda {
     /**
-     Se instancian los regalos para utilizar su informacion
+     * Se instancian los regalos para utilizar su informacion
      * que ser&iacutea amistad y su costo
      */
     Baya b1=new Baya();
@@ -26,10 +27,11 @@ public class Tienda {
     
     
     /**
-     * Abastece el inventario al iniciar el programa con los regalos
-     * @version 17 enero 2024
-     * @param none 
+     * Abastece el inventario al iniciar el programa con los regalos.
+     * Pues sino, al abrir el menu se multiplicaria y se resuelve dicho error. 
      * 
+     * @author nelsoncarrillo
+     * @version 1.0 17 enero 2024
      */
     void fillInventario(){
         (this.inventario).insertarlast(e1);
@@ -44,11 +46,14 @@ public class Tienda {
     }
     
     /**
-     Despliega menu de seleccion acorde a el regalo
-     * que se desea comprar
-     * @param Usuario para modificar su cash con su setter
-     * @param Tamagotchi que vendria siendo el pikachu para modificar
-     * su amistad con setter
+     * Despliega menu de seleccion acorde a el regalo.
+     * Acorde pues, al regalo que se desea comprar
+     * 
+     * @param user objeto tipo usuario para modificar su cash con su setter
+     * @param t1 objeto tipo pokemon que vendria siendo el pikachu o pachirisu para modificar
+     * su amistad con setter.
+     * @author nelsoncarrillo
+     * @version 1.0 17 enero 2024
      */
     void menu(Usuario user,Pokemon t1){
         

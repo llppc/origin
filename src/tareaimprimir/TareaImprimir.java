@@ -4,8 +4,9 @@ import java.util.Scanner;
 public class TareaImprimir {
     
     /**
-     * Este es el main de mi programa
-     * @author Nelson Carrillo
+     * Este es el main de mi programa.
+     * @author nelsoncarrillo
+     * @version 1.0 17 enero 2024
      */
     public static void main(String[] args) {
         

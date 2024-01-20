@@ -1,31 +1,50 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Clck nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tareaimprimir;
 
 /**
- *Superclase Regalo
+ * Superclase de los regalos que se le dan a los pokemones.
+ * 
  * @author nelsoncarrillo
+ * @version 1.0 17 enero 2024
  */
 public abstract class Regalo {
+    //atributos de los regalos, tienen un costo y beneficio.
     int amistad;
     int costo;
     
     /**
-     es el getter de la amistad brindada de cada regalo
-     */
+    * Devuelve la amistad que da cada regalo.
+    * Es el getter del atributo amistad para cada regalo.
+    * 
+    *
+    * @author nelsoncarrillo
+    * @version 1.0 17 enero 2024   
+    * @return Integer de la amistad brindada por el regalo
+    */
     int amistad(){
         return this.amistad;
     }
     
     /**
-     es el getter del costo de cada regalo
-     */
+    * Devuelve el precio de cada regalo.
+    * Es el getter del atributo costo para cada regalo.
+    * 
+    *
+    * @author nelsoncarrillo
+    * @version 1.0 17 enero 2024   
+    * @return Integer del costo del regalo
+    */
     int costo(){
         return this.costo;
     }
     
+    /**
+    * Devuelve un string a imprimir a la hora de desplegar un men&uacute de regalos.
+    * Metodo abstracto supuesto a polimorfismo por cada regalo.
+    *
+    * @author nelsoncarrillo
+    * @version 1.0 17 enero 2024   
+    * @return String con precio en watts del regalo
+    */
     abstract String menuItem();
     
 }

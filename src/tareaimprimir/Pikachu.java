@@ -1,46 +1,65 @@
-/*
- * Clk nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tareaimprimir;
 import java.util.Random;
 import java.util.Scanner;
 
 /**
- * Clase de tamagotchi lo que vendr&iacutea siendo pikachu
+ * Subclase de pokemon.
+ * Pues pikachu es un tipo de pokemon, y al modificar la opci&oacuten de 
+ * elegir si usar a pachirisu o pikachu se cre&oacute esta herencia.
+ * 
  * @author nelsoncarrillo
+ * @version 1.0 17 enero 2024
  */
 public class Pikachu extends Pokemon{
-    private long amistad=0;
-    Scanner myObje = new Scanner(System.in);
+    Scanner myObje = new Scanner(System.in); //para los inputs por consola.
     
     /**
-     Se le resta el nivel de amistad al tamagotchi
-     * Hecho especialmente para disminuir el nivel cada segundo
-     */
+    * Disminuye en 1 unidad la amistad del pikachu.
+    * Es creado para la funcionalidad de que se pierde 1 de amistad por cada 
+    * segundo que pase.
+    * 
+    * @author nelsoncarrillo
+    * @version 1.0 17 enero 2024   
+    */
     public void restaram(){
         this.amistad-=1;
     }
     
     /**
-     Se le suma una cantidad n de amistad a la que ya acumulaba 
-     * @param Amistad que proviene de regalos
-     */
+    * Se le da la amistad proveniente de un regalo.
+    * La unica manera de obtener amistad es mediante un regalo
+    * y asi se le suma su valor.
+    * 
+    * @author nelsoncarrillo
+    * @version 1.0 17 enero 2024.
+    * @param n integer de la cantidad de amistad.
+    */
     public void darAmistad(int n){
         this.amistad+=n;
     }
     
     /**
-     Hecha para obtener el nivel al momento de llamar la funci&oacuten
-     * de amistad del tamagotchi
-     */
+    * Devuelve la amistad de la instancia del pikachu.
+    * Es el getter del atributo amistad del pikachu.
+    * 
+    *
+    * @author nelsoncarrillo
+    * @version 1.0 17 enero 2024   
+    * @return Integer de la amistad del pikachu a un instante dado
+    */
     public long getAmistad(){
         return this.amistad;
     }
     
     /**
-     * Imprime numero de amistad y dependiendo de este ya que el maximo es 
-     * 10000 pues el &aacutenimo del tamagotchi
-     */
+    * Imprime por pantalla el ascii art del pikachu acorde a su amistad.
+    * Se especifican unos rangos del nivel de amistad que sabemos que va de 0
+    * hasta 10000 y entre ellos la actitud del pikachu cambia.
+    * 
+    *
+    * @author nelsoncarrillo
+    * @version 1.0 17 enero 2024   
+    */
     public void verAmistad(){
         System.out.println("");
         System.out.println("NIVEL DE AMISTAD:    "+this.amistad);
@@ -70,10 +89,14 @@ public class Pikachu extends Pokemon{
     }
     
     /**
-     En vez de crear una clase juego, lo vi como un atributo propio 
-     * del tamagotchi ya que este genera una carta del mazo y por
-     * @param Usuario se le modifica los watts con su m&eacutetodo de apostar
-     */
+    * Permite abrir el juego de las apuestas.
+    * M&eacutetodo propuesto a polimorfismo tanto para pikachu como 
+    * pachirisu.
+    * 
+    * @author nelsoncarrillo
+    * @version 1.0 17 enero 2024
+    * @param user instancia del usuario que apostar&aacute y gana o pierde watts.
+    */
     void jugar(Usuario user){
         int opt=0;
         int apt=0;

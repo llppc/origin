@@ -1,10 +1,8 @@
-/*fpush
- * C nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package tareaimprimir;
 
 /**
- *Clase de Lista doblemente enlazadas
+ *Clase de Lista doblemente enlazadas.
+ * 
  * @version 17 enero 2024
  * @author nelsoncarrillo
  */
@@ -16,18 +14,22 @@ public class ListaDoble {
     int size=0;
     
     /**
-    *Devuelve el primer nodo
+    *Devuelve el primer nodo.
+    * 
+    * @author nelsoncarrillo
     * @version 17 enero 2024
-    * @param n/a
+    * @return primer nodo de la lista enlazada.
     */
     NodoDoble getPrimero(){
         return this.primero;
     }
     
     /**
-    *Inserta en el primer lugar de la lista pasando un regalo como elemento
+    * Inserta en el primer lugar de la lista pasando un regalo como elemento.
+    * 
+    * @author nelsoncarrillo
     * @version 17 enero 2024
-    * @param Regalo
+    * @param r1 regalo a agregar
     */
     void insertarprimero(Regalo r1){
         NodoDoble nuevo = new NodoDoble(r1);
@@ -40,9 +42,13 @@ public class ListaDoble {
     }
     
     /**
-    *Inserta un elemento pasado como regalo justo despu&eacutes de un nodo referenciado como @param
+    * Inserta un elemento pasado como regalo justo despu&eacutes de un nodo.
+    * Ese nodo pues es referenciado como @param
+    * 
+    * @author nelsoncarrillo
     * @version 17 enero 2024
-    * @param NodoDoble,Regalo
+    * @param anterior nodo referencia
+    * @param r1 regalo a agregar
     */
     void insertardespues(NodoDoble anterior,Regalo r1){
         NodoDoble nuevo = new NodoDoble(r1);
@@ -55,9 +61,11 @@ public class ListaDoble {
     }
     
     /**
-    *Elimina el nodo de la lista que contenga el regalo pasado como @param
+    * Elimina el nodo de la lista que contenga el regalo pasado como @param.
+    * 
+    * @author nelsoncarrillo
     * @version 17 enero 2024
-    * @param Regalo
+    * @param r1 regalo a eliminar
     */
     void eliminar(Regalo r1){
         NodoDoble actual;
@@ -86,9 +94,11 @@ public class ListaDoble {
     }
     
     /**
-     * Recorre los regalos e imprime su m&eacutetodo polim&oacuterfico 
+     * Recorre los regalos e imprime su m&eacutetodo polim&oacuterfico.
+     * Es un print simple con un for de recorrido.
+     * 
+     * @author nelsoncarrillo
      * @version 17 enero 2024
-     * @param none
      */
     void recorrereimprimir(){   
         int n=0;
